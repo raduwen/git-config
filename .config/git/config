@@ -1,0 +1,10 @@
+[user]
+  name = "raduwen"
+  username = "raduwen"
+  email = "raduwen@gmail.com"
+
+[init]
+  defaultBranch = "main"
+
+[ghq]
+  root = "~/.local/src"

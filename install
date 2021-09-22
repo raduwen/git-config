@@ -1,0 +1,11 @@
+#!/bin/sh
+
+GIT_CONFIG_DIR=$(cd $(dirname $0); pwd)
+
+if [ -d $HOME/.config/git ] && [ ! -h $HOME/.config/git ]; then
+  echo "backup to $HOME/.config/git.bak"
+  mv $HOME/.config/git $HOME/.config/git.bak
+fi
+
+rm -rf $HOME/.config/git
+ln -sf "$GIT_CONFIG_DIR"/.config/git $HOME/.config/git
